@@ -1,0 +1,19 @@
+{
+  "name": "zzzcg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "chrome-aws-lambda": "^2.0.0",
+    "puppeteer-core": "^2.0.0",
+    "uuid": "^3.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
