@@ -3,33 +3,15 @@ const AWS = require('aws-sdk');
 const db = new AWS.DynamoDB.DocumentClient({ apiVersion: '2012-08-10' });
 const  uuid = require('uuid/v4');
 const chromium = require('chrome-aws-lambda');
-const cheerio = require("cheerio");
+const parser = require('./lib/parser.js');
 
 const jobsTable = process.env.JOBS_TABLE;
 
 async function scrapeListings(page) {
   await page.goto("http://www.zzzcg.me/poslovi/page/1/");
   const html = await page.content();
-  const $ = cheerio.load(html);
-
-  const listings = $(".job").map((index, element) => {
-    const titleElement = $(element).find(".title strong a");
-    const titleTextElement = $(element).find(".title");
-    const timeElement = $(element).find(".date");
-    const locationElement = $(element).find(".location");
-    const employerElement = $(titleTextElement).contents().filter(function () {
-      return this.nodeType === 3 && /\S/.test(this.nodeValue);
-    })
-    const title = $(titleElement).text();
-    const url = $(titleElement).attr("href");
-    const datePosted = $(timeElement).text();
-    const employer = $(employerElement).text().trim();
-    const location = $(locationElement).text();
-
-    return { title, url, datePosted, employer, location };
-  }).get();
-  console.log(listings);
-  return listings;
+  const result = parser.listingsScraper(html);
+  return result;
 }
 
 module.exports.crawler = async function (event, context) {
