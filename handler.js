@@ -1,7 +1,7 @@
 'use strict';
 const AWS = require('aws-sdk');
 const db = new AWS.DynamoDB.DocumentClient({ apiVersion: '2012-08-10' });
-const  uuid = require('uuid/v4');
+const uuid = require('uuid/v4');
 const chromium = require('chrome-aws-lambda');
 const parser = require('./lib/parser.js');
 
@@ -33,7 +33,7 @@ module.exports.crawler = async function (event, context) {
         location: listings[i].location,
         datePosted: listings[i].datePosted
       };
-      
+
       await db.put({
         TableName: jobsTable,
         Item: job
