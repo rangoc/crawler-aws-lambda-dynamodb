@@ -2,6 +2,8 @@ version: 0.2
 
 phases: 
     install: 
+      runtime-versions:
+        nodejs: 10
       commands:
         - npm install -g serverless@1.57.0
         - npm install mocha chai --save-dev
