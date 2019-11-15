@@ -24,6 +24,7 @@ module.exports.crawler = async function (event, context) {
     });
     const page = await browser.newPage();
     const listings = await scrapeListings(page);
+    await browser.close();
     for (var i = 0; i < listings.length; i++) {
       const job = {
         id: uuid(),
