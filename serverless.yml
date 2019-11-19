@@ -2,7 +2,8 @@ service: zzzcg
 
 custom:
   settings:
-    JOBS_TABLE: jobs
+    stage: ${opt:stage, self:provider.stage}
+    JOBS_TABLE: ${self:custom.stage}-jobs
 
 provider:
   name: aws
