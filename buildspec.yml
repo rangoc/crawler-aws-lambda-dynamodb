@@ -12,4 +12,6 @@ phases:
     build:
       commands:
         - npm run test
-    
+artifacts:
+  files:
+  - ./**/*
