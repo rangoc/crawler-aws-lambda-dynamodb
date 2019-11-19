@@ -6,16 +6,10 @@ phases:
         nodejs: 10
       commands:
         - npm install -g serverless@1.57.0
-        - npm install mocha chai --save-dev
     pre_build:
       commands:
-        - npm install puppeteer-core
-        - npm install cheerio
-        - npm install chrome-aws-lambda
-        - npm install uuid
+        - npm install
     build:
       commands:
         - npm run test
-    post_build:
-      commands:
-        - serverless deploy --region eu-central-1 --verbose
+    
