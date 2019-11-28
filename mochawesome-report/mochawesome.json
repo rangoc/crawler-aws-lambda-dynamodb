@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2019-11-28T14:04:24.920Z",
-    "end": "2019-11-28T14:04:25.176Z",
-    "duration": 256,
+    "start": "2019-11-28T14:30:56.655Z",
+    "end": "2019-11-28T14:30:56.839Z",
+    "duration": 184,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ac82dfe0-596d-4f80-a892-b03eba4a6519",
+      "uuid": "742ef3a0-a758-4f1e-b68e-f5dc4895d764",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3d9a621d-366e-4ff0-9e2b-70ea6692f3d0",
+          "uuid": "6dcbff2b-fc87-4476-a818-b6c2fa63da20",
           "title": "parser.js tests",
           "fullFile": "/home/goran/workspace/zzzcg/test/parser.test.js",
           "file": "/test/parser.test.js",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "fb449ffc-76fb-4cc8-bf95-16cfab00b0d1",
+              "uuid": "dae33b3f-65c1-41c6-91a6-31b611a394de",
               "title": "listingsScraper() Test",
               "fullFile": "/home/goran/workspace/zzzcg/test/parser.test.js",
               "file": "/test/parser.test.js",
@@ -47,7 +47,7 @@
                   "title": "number of objects should equal 35",
                   "fullTitle": "parser.js tests listingsScraper() Test number of objects should equal 35",
                   "timedOut": false,
-                  "duration": 221,
+                  "duration": 155,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,26 +56,26 @@
                   "context": null,
                   "code": "const result = parser.listingsScraper(html);\nexpect(result.length).to.equal(35);",
                   "err": {},
-                  "uuid": "6a831710-de9d-4de0-abbb-ca1193f97268",
-                  "parentUUID": "fb449ffc-76fb-4cc8-bf95-16cfab00b0d1",
+                  "uuid": "9cffcfe9-cb88-4a59-a6de-4b09a8f8209f",
+                  "parentUUID": "dae33b3f-65c1-41c6-91a6-31b611a394de",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "6a831710-de9d-4de0-abbb-ca1193f97268"
+                "9cffcfe9-cb88-4a59-a6de-4b09a8f8209f"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 221,
+              "duration": 155,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "6512d7b0-8907-409f-9233-2ce4266805d6",
+              "uuid": "3874e04b-d0e9-4012-beab-1888b6794673",
               "title": "scraper() Test",
               "fullFile": "/home/goran/workspace/zzzcg/test/parser.test.js",
               "file": "/test/parser.test.js",
@@ -86,7 +86,7 @@
                   "title": "name should equal \"NASTAVNIK/CA FIZIKE\"",
                   "fullTitle": "parser.js tests scraper() Test name should equal \"NASTAVNIK/CA FIZIKE\"",
                   "timedOut": false,
-                  "duration": 5,
+                  "duration": 7,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -95,20 +95,20 @@
                   "context": null,
                   "code": "const result = parser.scraper($,element);\nexpect(result.title).to.equal(\"NASTAVNIK/CA FIZIKE\");",
                   "err": {},
-                  "uuid": "ab33af5a-2bf2-4ebd-9d0a-df67a3c94457",
-                  "parentUUID": "6512d7b0-8907-409f-9233-2ce4266805d6",
+                  "uuid": "25330f0b-f85d-4654-bcb5-9dda7e923e54",
+                  "parentUUID": "3874e04b-d0e9-4012-beab-1888b6794673",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "ab33af5a-2bf2-4ebd-9d0a-df67a3c94457"
+                "25330f0b-f85d-4654-bcb5-9dda7e923e54"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 5,
+              "duration": 7,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
