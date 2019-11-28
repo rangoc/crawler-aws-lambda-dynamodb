@@ -15,9 +15,8 @@ phases:
 reports: 
   group1:
     files:
-      - '**/*'
-    base-directory: 'mochawesome-report'
-    file-format: 'CumberJson'
+      - 'mochawesome-report/mochawesome.json'
+    file-format: CumberJson
 artifacts:
   files:
   - ./**/*
