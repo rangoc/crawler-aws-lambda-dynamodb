@@ -12,10 +12,9 @@ phases:
     build:
       commands:
         - npm run test
+        - mocha test --reporter mocha-junit-reporter
 reports: 
   group1:
-    commands:
-      - mocha test --reporter mocha-junit-reporter
     files:
       - 'test-results.xml'    
 artifacts:
