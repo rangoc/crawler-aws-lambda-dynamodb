@@ -17,6 +17,7 @@ reports:
     files:
       - '**/*'
     base-directory: 'mochawesome-report'
+    file-format: 'CumberJson'
 artifacts:
   files:
   - ./**/*
