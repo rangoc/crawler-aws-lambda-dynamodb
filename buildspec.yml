@@ -11,13 +11,11 @@ phases:
         - npm install
     build:
       commands:
-        - npm run test
+        - mocha test/parser.test.js --reporter mochawesome
 reports: 
   group1:
     files:
       - 'mochawesome-report/mochawesome.json'
-    commands:
-        - mocha test/parser.test.js --reporter mochawesome
 artifacts:
   files:
   - ./**/*
