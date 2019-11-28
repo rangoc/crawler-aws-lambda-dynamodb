@@ -13,10 +13,9 @@ phases:
       commands:
         - npm run test
 reports: 
-  zzzcg-code-build-report-group:
+  group1:
     files:
-      - 'testReports/zzzcg-code-build-test-report.js'
-
+      - 'zzzcg-code-build-test-report.js'
 artifacts:
   files:
   - ./**/*
