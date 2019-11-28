@@ -12,7 +12,6 @@ phases:
     build:
       commands:
         - npm run test
-        - mocha test --reporter mocha-junit-reporter
 reports: 
   group1:
     files:
