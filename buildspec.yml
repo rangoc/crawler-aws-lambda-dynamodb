@@ -15,7 +15,7 @@ phases:
 reports: 
   group1:
     files:
-      - 'zzzcg-code-build-test-report.json'
+      - 'test/parser.test.js'
     commands:
         - npm run test
 artifacts:
