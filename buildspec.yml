@@ -15,7 +15,7 @@ phases:
 reports: 
   group1:
     files:
-      - 'zzzcg-code-build-test-report.js'
+      - 'zzzcg-code-build-test-report.json'
 artifacts:
   files:
   - ./**/*
