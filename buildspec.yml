@@ -15,9 +15,9 @@ phases:
 reports: 
   group1:
     files:
-      - 'test/parser.test.js'
+      - 'mochawesome-report/mochawesome.json'
     commands:
-        - npm run test
+        - mocha test/parser.test.js --reporter mochawesome
 artifacts:
   files:
   - ./**/*
