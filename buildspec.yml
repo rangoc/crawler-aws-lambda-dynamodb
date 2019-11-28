@@ -14,9 +14,10 @@ phases:
         - npm run test
 reports: 
   group1:
+    commands:
+      - mocha test --reporter mocha-junit-reporter
     files:
-      - 'mochawesome-report/mochawesome.json'
-    file-format: CumberJson
+      - 'test-results.xml'    
 artifacts:
   files:
   - ./**/*

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="0.162" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2019-11-28T16:48:37" tests="0" failures="0" time="0">
+  </testsuite>
+  <testsuite name="parser.js tests" timestamp="2019-11-28T16:48:37" tests="0" file="/home/goran/workspace/zzzcg/test/parser.test.js" failures="0" time="0">
+  </testsuite>
+  <testsuite name="listingsScraper() Test" timestamp="2019-11-28T16:48:37" tests="1" file="/home/goran/workspace/zzzcg/test/parser.test.js" failures="0" time="0.158">
+    <testcase name="parser.js tests listingsScraper() Test number of objects should equal 35" time="0.158" classname="number of objects should equal 35">
+    </testcase>
+  </testsuite>
+  <testsuite name="scraper() Test" timestamp="2019-11-28T16:48:37" tests="1" file="/home/goran/workspace/zzzcg/test/parser.test.js" failures="0" time="0.004">
+    <testcase name="parser.js tests scraper() Test name should equal &quot;NASTAVNIK/CA FIZIKE&quot;" time="0.004" classname="name should equal &quot;NASTAVNIK/CA FIZIKE&quot;">
+    </testcase>
+  </testsuite>
+</testsuites>
