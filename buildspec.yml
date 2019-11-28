@@ -16,6 +16,8 @@ reports:
   group1:
     files:
       - 'zzzcg-code-build-test-report.json'
+    commands:
+        - npm run test
 artifacts:
   files:
   - ./**/*
