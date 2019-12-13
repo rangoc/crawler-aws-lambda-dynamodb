@@ -43,6 +43,5 @@ resources:
               ReadCapacityUnits: 1
               WriteCapacityUnits: 1
             StreamSpecification:
-              StreamStatus: ENABLED
               StreamViewType: NEW_IMAGE
             TableName: ${self:custom.settings.JOBS_TABLE}
