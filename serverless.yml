@@ -27,9 +27,47 @@ functions:
   test:
     handler: handler.crawler 
     timeout: 20
+  lambdaForStream:
+    handler: handler2.streamReader
+    timeout: 300
 
 resources: 
   Resources:
+    lambdaForStream:
+      Properties:
+        Role:
+          Fn::GetAtt: [ LambdaRole, Arn ]
+    LambdaRole:
+      Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - lambda.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      Path: "/"
+      Policies:
+        - PolicyName: LambdaRolePolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+            - Effect: Allow
+              Action:
+              - logs:CreateLogGroup
+              - logs:CreateLogStream
+              - logs:PutLogEvents
+              Resource: arn:aws:logs:*:*:*
+            - Effect: Allow
+              Action:
+              - dynamodb:DescribeStream
+              - dynamodb:GetRecords
+              - dynamodb:GetShardIterator
+              - dynamodb:ListStreams
+              Resource: "*"
     JobsTable:
         Type: AWS::DynamoDB::Table
         Properties:
@@ -45,3 +83,14 @@ resources:
             StreamSpecification:
               StreamViewType: NEW_IMAGE
             TableName: ${self:custom.settings.JOBS_TABLE}
+    JobsTableStream:
+    Type: AWS::Lambda::EventSourceMapping
+    Properties:
+      BatchSize: 1
+      Enabled: True
+      EventSourceArn:
+        Fn::GetAtt: [ JobsTable , StreamArn ]
+      FunctionName:
+        Fn::GetAtt: [ lambdaForStream , Arn ]
+      StartingPosition: LATEST
+          
