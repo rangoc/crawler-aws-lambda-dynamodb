@@ -39,35 +39,35 @@ resources:
           Fn::GetAtt: [ LambdaRole, Arn ]
     LambdaRole:
       Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-        - Effect: Allow
-          Principal:
-            Service:
-            - lambda.amazonaws.com
-          Action:
-          - sts:AssumeRole
-      Path: "/"
-      Policies:
-        - PolicyName: LambdaRolePolicy
-          PolicyDocument:
-            Version: '2012-10-17'
-            Statement:
-            - Effect: Allow
-              Action:
-              - logs:CreateLogGroup
-              - logs:CreateLogStream
-              - logs:PutLogEvents
-              Resource: arn:aws:logs:*:*:*
-            - Effect: Allow
-              Action:
-              - dynamodb:DescribeStream
-              - dynamodb:GetRecords
-              - dynamodb:GetShardIterator
-              - dynamodb:ListStreams
-              Resource: "*"
+      Properties:
+        AssumeRolePolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+              - lambda.amazonaws.com
+            Action:
+            - sts:AssumeRole
+        Path: "/"
+        Policies:
+          - PolicyName: LambdaRolePolicy
+            PolicyDocument:
+              Version: '2012-10-17'
+              Statement:
+              - Effect: Allow
+                Action:
+                - logs:CreateLogGroup
+                - logs:CreateLogStream
+                - logs:PutLogEvents
+                Resource: arn:aws:logs:*:*:*
+              - Effect: Allow
+                Action:
+                - dynamodb:DescribeStream
+                - dynamodb:GetRecords
+                - dynamodb:GetShardIterator
+                - dynamodb:ListStreams
+                Resource: "*"
     JobsTable:
         Type: AWS::DynamoDB::Table
         Properties:
