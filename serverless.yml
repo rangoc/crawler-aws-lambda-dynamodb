@@ -69,28 +69,28 @@ resources:
                 - dynamodb:ListStreams
                 Resource: "*"
     JobsTable:
-        Type: AWS::DynamoDB::Table
-        Properties:
-            AttributeDefinitions:
-            - AttributeName: "id"
-              AttributeType: "S"
-            KeySchema:
-            - AttributeName: "id"
-              KeyType: "HASH"
-            ProvisionedThroughput:
-              ReadCapacityUnits: 1
-              WriteCapacityUnits: 1
-            StreamSpecification:
-              StreamViewType: NEW_IMAGE
-            TableName: ${self:custom.settings.JOBS_TABLE}
+      Type: AWS::DynamoDB::Table
+      Properties:
+          AttributeDefinitions:
+          - AttributeName: "id"
+            AttributeType: "S"
+          KeySchema:
+          - AttributeName: "id"
+            KeyType: "HASH"
+          ProvisionedThroughput:
+            ReadCapacityUnits: 1
+            WriteCapacityUnits: 1
+          StreamSpecification:
+            StreamViewType: NEW_IMAGE
+          TableName: ${self:custom.settings.JOBS_TABLE}
     JobsTableStream:
-    Type: AWS::Lambda::EventSourceMapping
-    Properties:
-      BatchSize: 1
-      Enabled: True
-      EventSourceArn:
-        Fn::GetAtt: [ JobsTable , StreamArn ]
-      FunctionName:
-        Fn::GetAtt: [ lambdaForStream , Arn ]
-      StartingPosition: LATEST
-          
+      Type: AWS::Lambda::EventSourceMapping
+      Properties:
+        BatchSize: 1
+        Enabled: True
+        EventSourceArn:
+          Fn::GetAtt: [ JobsTable , StreamArn ]
+        FunctionName:
+          Fn::GetAtt: [ lambdaForStream , Arn ]
+        StartingPosition: LATEST
+            
