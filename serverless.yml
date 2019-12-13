@@ -42,4 +42,7 @@ resources:
             ProvisionedThroughput:
               ReadCapacityUnits: 1
               WriteCapacityUnits: 1
+            StreamSpecification:
+              StreamEnabled: true
+              StreamViewType: NEW_IMAGE
             TableName: ${self:custom.settings.JOBS_TABLE}
