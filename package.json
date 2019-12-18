@@ -7,6 +7,7 @@
     "aws-appsync": "^3.0.2",
     "cheerio": "^1.0.0-rc.3",
     "chrome-aws-lambda": "^2.0.0",
+    "graphql-tag": "^2.10.1",
     "puppeteer-core": "^2.0.0",
     "uuid": "^3.3.3"
   },
