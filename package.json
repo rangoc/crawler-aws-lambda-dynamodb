@@ -4,6 +4,7 @@
   "description": "",
   "main": "handler.js",
   "dependencies": {
+    "aws-appsync": "^3.0.2",
     "cheerio": "^1.0.0-rc.3",
     "chrome-aws-lambda": "^2.0.0",
     "puppeteer-core": "^2.0.0",
