@@ -1,4 +1,4 @@
-const graph = require('graphql-tag');
+import { gql } from 'graphql-tag'
 
 module.exports.handler =  async function(event, context) {
     console.log("EVENT: \n" + JSON.stringify(event, null, 2))
@@ -6,7 +6,7 @@ module.exports.handler =  async function(event, context) {
     const {employer, location, datePosted, title, url } = event;
     
     
-    const mutation = graph.gql`
+    const mutation = gql`
     mutation createJob {
       createJob(input: { 
         
