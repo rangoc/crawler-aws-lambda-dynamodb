@@ -1,7 +1,7 @@
-const gql  = require('graphql-tag')
-const AWSAppSyncClient = require('aws-appsync')
+const gql  = require('graphql-tag');
+const AWSAppSyncClient = require('aws-appsync');
 
-const graphqlClient = new AWSAppSyncClient({
+const graphqlClient = AWSAppSyncClient({
   url: process.env.url,
   region: process.env.region,
   auth: {
