@@ -1,5 +1,14 @@
 const gql  = require('graphql-tag')
+const AWSAppSyncClient = require('aws-appsync')
 
+const graphqlClient = new AWSAppSyncClient({
+  url: process.env.url,
+  region: process.env.region,
+  auth: {
+    type: process.env.authType,
+    apiKey: process.env.apiKey
+  }
+})
 module.exports.handler =  async function(event, context) {
     console.log("EVENT: \n" + JSON.stringify(event, null, 2))
     
