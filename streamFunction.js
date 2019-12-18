@@ -15,7 +15,6 @@ module.exports.handler =  async function(event, context) {
         datePosted: "${datePosted}",
         title: "${title}",
         url: "${url}"
-      } 
       }) {
           id
           employer
