@@ -36,11 +36,11 @@ functions:
     timeout: 300
     events:
       - stream: arn:aws:dynamodb:eu-central-1:245862733847:table/stg-jobs/stream/2019-12-13T11:59:28.470
-    environment:
-      url: $(env:API_URL)
-      region: $(env:REGION)
-      authType: $(env:AUTH_TYPE)
-      apiKey: $(env:API_KEY)
+    #environment:
+      #url: $(env:API_URL)
+      #region: $(env:REGION)
+      #authType: $(env:AUTH_TYPE)
+      #apiKey: $(env:API_KEY)
 
 resources: 
   Resources:

@@ -8,11 +8,11 @@ const graphqlClient = new client.AWSAppSyncClient({
     type: process.env.authType,
     apiKey: process.env.apiKey
   }
-})
+})*/
 module.exports.handler =  async function(event, context) {
-    console.log("EVENT: \n" + JSON.stringify(event, null, 2))
+    console.log("EVENT: \n" + JSON.stringify(event, null, 2));
     
-    const {employer, location, datePosted, title, url } = event;
+    /*const {employer, location, datePosted, title, url } = event;
     
     
     const mutation = gql`
@@ -38,5 +38,5 @@ await graphqlClient.mutate({ mutation });
   return {
     statusCode: 200,
     body: 'Mutation success',
-  }
-}*/
+  }*/
+}
