@@ -1,4 +1,4 @@
-const gql  = require('graphql-tag');
+/*const gql  = require('graphql-tag');
 const client = require('aws-appsync');
 
 const graphqlClient = new client.AWSAppSyncClient({
@@ -34,10 +34,9 @@ module.exports.handler =  async function(event, context) {
       }
     }
   `;
-
-  await graphqlClient.mutate({ mutation });
+await graphqlClient.mutate({ mutation });
   return {
     statusCode: 200,
     body: 'Mutation success',
   }
-}
+}*/
