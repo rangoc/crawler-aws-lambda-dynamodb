@@ -8,11 +8,11 @@ require('dotenv').config();
 module.exports.handler =  async function(event, context) {
     //const {employer, location, datePosted, title, url } = event;
     const client = new AWSAppSyncClient({
-      url: process.env.url,
-      region: process.env.region,
+      url: process.env.URL,
+      region: process.env.REGION,
       auth: {
-        type: process.env.apiType,
-        apiKey: process.env.apiKey
+        type: process.env.API_TYPE,
+        apiKey: process.env.API_KEY
       },
       disableOffline: true
     });
