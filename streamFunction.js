@@ -35,7 +35,7 @@ module.exports.handler =  async function(event, context) {
       }
     }
   `;
-await client.mutate({ mutation, fetchPolicy: 'network-only' });
+await client.mutate({ mutation });
   return {
     statusCode: 200,
     body: 'Mutation success',
