@@ -16,15 +16,11 @@ module.exports.handler =  async function(event, context) {
       disableOffline: true
     });
     const query = gql`
-      query AllJobs {
-        allJobs {
-            id
-            employer
-            location
-            datePosted
-            title
-            url
-            
+      query listJobs {
+        listJobs{
+          items {
+            id title employer datePosted location url
+          }
         }
       }
     `;
