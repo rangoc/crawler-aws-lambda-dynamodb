@@ -1,4 +1,6 @@
 service: zzzcg
+plugins:
+  - serverless-dotenv-plugin
 
 custom:
   stage: ${opt:stage, self:provider.stage}
@@ -39,6 +41,7 @@ functions:
     environment:
       url: $(env:API_URL)
       region: $(env:REGION)
+      authType: $(env:AUTH_TYPE)
       apiKey: $(env:API_KEY)
 
 resources: 
@@ -58,5 +61,3 @@ resources:
           StreamSpecification:
             StreamViewType: NEW_IMAGE
           TableName: ${self:custom.settings.JOBS_TABLE}
-    
-            
