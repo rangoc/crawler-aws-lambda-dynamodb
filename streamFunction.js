@@ -1,8 +1,8 @@
 const gql  = require('graphql-tag');
 const AWSAppSyncClient = require('aws-appsync').default;
+const AUTH_TYPE = require('aws-appsync/lib/link/auth-link').AUTH_TYPE;
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
-
 
 module.exports.handler =  async function(event, context) {
     //const {employer, location, datePosted, title, url } = event;
@@ -10,7 +10,7 @@ module.exports.handler =  async function(event, context) {
       url: process.env.url,
       region: process.env.region,
       auth: {
-        type: process.env.authType,
+        type: AUTH_TYPE.API_KEY,
         apiKey: process.env.apiKey
       },
       disableOffline: true

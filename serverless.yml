@@ -39,7 +39,6 @@ functions:
     environment:
       url: $(env:API_URL)
       region: $(env:REGION)
-      authType: $(env:AUTH_TYPE)
       apiKey: $(env:API_KEY)
 
 resources: 
