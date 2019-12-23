@@ -5,6 +5,7 @@
   "main": "handler.js",
   "dependencies": {
     "aws-appsync": "^3.0.2",
+    "aws-appsync-auth-link": "^2.0.1",
     "cheerio": "^1.0.0-rc.3",
     "chrome-aws-lambda": "^2.0.0",
     "graphql-tag": "^2.10.1",

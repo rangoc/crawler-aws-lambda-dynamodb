@@ -1,6 +1,6 @@
 const gql  = require('graphql-tag');
 const AWSAppSyncClient = require('aws-appsync').default;
-const AUTH_TYPE = require('aws-appsync/lib/link/auth-link').AUTH_TYPE;
+const AUTH_TYPE = require('aws-appsync-auth-link/lib/auth-link').AUTH_TYPE;
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
 
