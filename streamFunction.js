@@ -3,7 +3,7 @@ const AWSAppSyncClient = require('aws-appsync').default;
 const AUTH_TYPE = require('aws-appsync-auth-link/lib/auth-link').AUTH_TYPE;
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
-require('dotenv').config();
+require('dotenv').config({ path:__dirname+'/./../../.env.stg'});
 
 module.exports.handler =  async function(event, context) {
     //const {employer, location, datePosted, title, url } = event;
