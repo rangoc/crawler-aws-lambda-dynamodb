@@ -3,6 +3,7 @@ const AWSAppSyncClient = require('aws-appsync').default;
 
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
+require('dotenv').config();
 
 module.exports.handler =  async function(event, context) {
     //const {employer, location, datePosted, title, url } = event;
@@ -10,7 +11,7 @@ module.exports.handler =  async function(event, context) {
       url: process.env.url,
       region: process.env.region,
       auth: {
-        type: process.env.authType,
+        type: process.env.apiType,
         apiKey: process.env.apiKey
       },
       disableOffline: true
