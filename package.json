@@ -6,9 +6,9 @@
   "dependencies": {
     "aws-appsync": "^3.0.2",
     "aws-appsync-auth-link": "^2.0.1",
-    "aws-event-parser": "^1.0.0",
     "cheerio": "^1.0.0-rc.3",
     "chrome-aws-lambda": "^2.0.0",
+    "dotenv": "^8.2.0",
     "graphql-tag": "^2.10.1",
     "isomorphic-fetch": "^2.2.1",
     "puppeteer-core": "^2.0.0",
